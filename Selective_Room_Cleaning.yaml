@@ -21,7 +21,12 @@ sequence:
               {%- if states(room) == 'on' -%}
                 {%- set ns.room_numbers = ns.room_numbers + [rooms.get(room)] -%}
               {%- endif -%}
-            {%- endfor -%} {{ ns.room_numbers | join(', ') }}
+            {%- endfor -%}
+            {%- if (ns.room_numbers | count ) == 1 -%}
+              {{ ns.room_numbers }}
+            {% else %}
+              {{ ns.room_numbers | join(', ') }}
+            {%- endif -%}
           repeat: 1
     target:
       entity_id: vacuum.roborock_s8_pro_ultra # Replace with your entity_id for your vacuum

@@ -40,9 +40,6 @@ A [sample script](Selective_Room_Cleaning.yaml) can be utilized.
   #### What It Does
   When run, the script will run cleaning for the selected rooms when the corresponding input_boolean for the room is in the 'On' state.
 
-  #### Known limitations
-  The script in its current form will not clean individual rooms, so a minimum of 2 rooms/input_booleans need to be set in order for the script to work. 
-
 ## Putting it all together
 I've included my [dashboard yaml](SampleDashboard.yml) to use as an example of how this all can come together. In it, i've done the following:
 1) I included the [Lovelace Vacuum Card](https://github.com/denysdovhan/vacuum-card) to provide general functionality
